@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @association.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @association.description %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @association.website %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @association.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @association.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_association_path(@association) %> |
+<%= link_to 'Back', associations_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@feed_news) do |f| %>
+  <% if @feed_news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feed_news.errors.count, "error") %> prohibited this feed_news from being saved:</h2>
+
+      <ul>
+      <% @feed_news.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

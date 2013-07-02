@@ -1,0 +1,2 @@
+module FeedNewsHelper
+end

@@ -1,4 +1,19 @@
 AgroSocial::Application.routes.draw do
+  resources :notices
+
+
+  resources :events
+
+
+  resources :associations
+
+
+  resources :feed_news
+
+
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
