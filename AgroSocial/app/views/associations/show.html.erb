@@ -25,6 +25,16 @@
   <%= @association.password %>
 </p>
 
+<h3>Todos os eventos da associação</h3>
+
+<% @association.events.each do |event| %>
+<p>
+  <b>Evento:</b>
+  <%= event.name %>
+</p>
+
+<% end %>
+
 
 <%= link_to 'Edit', edit_association_path(@association) %> |
 <%= link_to 'Back', associations_path %>
