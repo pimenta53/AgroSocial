@@ -10,6 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :age
       t.string :genre
       t.string :address
+      t.boolean :is_association
 
       ## Recoverable
       #t.string   :reset_password_token
@@ -38,8 +39,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       ## Token authenticatable
       # t.string :authentication_token
-
-      t.boolean :is_associacao
 
       t.timestamps
     end
