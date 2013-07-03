@@ -1,0 +1,52 @@
+body{
+	background-image: url('novo4.png');
+	background-repeat:repeat;
+	/*
+	background-color:#519548;
+	http://www.colourlovers.com/pattern/3726382/Birch_Trees
+	*/
+}
+
+.sidebar{
+	background-color:#78C0A8;
+}
+
+.logo{
+	background-color: white;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-left:10px;
+}
+.events{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+.news {
+	background-color: #FCEBB6;
+}
+.news-inside{
+margin-top:100px;
+	
+}
+.new{
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-right:40px;
+	margin-left:20px;
+	min-height:1px;
+overflow:auto;
+}
+
+.content-center{
+	background-color: #FCEBB6;
+
+}
+
+.image-news{
+    height: 320px;
+    width: 100%;
+}
