@@ -1,5 +1,7 @@
 AgroSocial::Application.routes.draw do
-  root :to => "event#index"
+  devise_for :users
+
+  root :to => "events#index"
 
   resources :notices
 
