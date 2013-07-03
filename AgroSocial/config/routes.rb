@@ -1,4 +1,6 @@
 AgroSocial::Application.routes.draw do
+  root :to => "event#index"
+
   resources :notices
 
 
@@ -12,6 +14,8 @@ AgroSocial::Application.routes.draw do
 
 
   resources :users
+
+
 
 
   # The priority is based upon order of creation:
