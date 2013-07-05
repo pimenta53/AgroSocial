@@ -1,11 +1,6 @@
 AgroSocial::Application.routes.draw do
 
-<<<<<<< HEAD
-  resources :feeds
 
-  devise_for :users
-  
-=======
   devise_for :associations
   resources :events
 
@@ -14,7 +9,7 @@ AgroSocial::Application.routes.draw do
   resources :feeds
 
   devise_for :users
->>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
+
   root :to => "feeds#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
