@@ -1,5 +1,7 @@
 AgroSocial::Application.routes.draw do
 
+  resources :events
+
   resources :news
 
   resources :feeds
