@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20130705183754) do
+=======
+ActiveRecord::Schema.define(version: 20130705213913) do
+>>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
 
   create_table "feeds", force: true do |t|
     t.string   "name"
@@ -21,16 +25,28 @@ ActiveRecord::Schema.define(version: 20130705183754) do
   end
 
   create_table "users", force: true do |t|
+<<<<<<< HEAD
     t.string   "email",               default: "", null: false
     t.string   "encrypted_password",  default: "", null: false
+=======
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+>>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "age"
     t.string   "genre"
     t.string   "address"
     t.boolean  "is_association"
+<<<<<<< HEAD
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",       default: 0
+=======
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+>>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -40,5 +56,9 @@ ActiveRecord::Schema.define(version: 20130705183754) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+<<<<<<< HEAD
+=======
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+>>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
 
 end
