@@ -1,5 +1,7 @@
 AgroSocial::Application.routes.draw do
 
+  resources :news
+
   resources :feeds
 
   devise_for :users
