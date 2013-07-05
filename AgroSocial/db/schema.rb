@@ -11,11 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20130705183754) do
-=======
-ActiveRecord::Schema.define(version: 20130705213913) do
->>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
+ActiveRecord::Schema.define(version: 20130705215241) do
+
+  create_table "associations", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.text     "description"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "associations", ["email"], name: "index_associations_on_email", unique: true
+  add_index "associations", ["reset_password_token"], name: "index_associations_on_reset_password_token", unique: true
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.date     "start_data"
+    t.date     "end_date"
+    t.text     "description"
+    t.string   "local"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "feeds", force: true do |t|
     t.string   "name"
@@ -24,29 +52,26 @@ ActiveRecord::Schema.define(version: 20130705213913) do
     t.datetime "updated_at"
   end
 
+  create_table "news", force: true do |t|
+    t.string   "title"
+    t.date     "date_time"
+    t.text     "content"
+    t.string   "author"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
-<<<<<<< HEAD
     t.string   "email",               default: "", null: false
     t.string   "encrypted_password",  default: "", null: false
-=======
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
->>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "age"
     t.string   "genre"
     t.string   "address"
     t.boolean  "is_association"
-<<<<<<< HEAD
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",       default: 0
-=======
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0
->>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -56,9 +81,5 @@ ActiveRecord::Schema.define(version: 20130705213913) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-<<<<<<< HEAD
-=======
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
->>>>>>> bf41971f8e95cbb951bd5146adef1dd9a610ca80
 
 end
