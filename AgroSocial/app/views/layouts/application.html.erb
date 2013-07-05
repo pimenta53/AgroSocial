@@ -7,15 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+	<div class="container">
+      <div class="masthead">
+        <h3 class="muted">AgroSocial</h3>
+	<%= render 'common/session' %>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Anuncios</a></li>
+                <li><a href="#">Contactos</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
 
-	<div id="secondaryContent">
-		<%= render 'common/session' %>
-	</div>
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 
 	<%= yield %>
+      <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
 
+    </div> <!-- /container -->
 </body>
 </html>
