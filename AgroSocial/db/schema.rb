@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20130706083315) do
-=======
-ActiveRecord::Schema.define(version: 20130705215241) do
->>>>>>> f3833128fed48bd028622a88c300a1434bb4203a
 
   create_table "associations", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -56,11 +52,7 @@ ActiveRecord::Schema.define(version: 20130705215241) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
   create_table "notices", force: true do |t|
-=======
-  create_table "news", force: true do |t|
->>>>>>> f3833128fed48bd028622a88c300a1434bb4203a
     t.string   "title"
     t.date     "date_time"
     t.text     "content"
