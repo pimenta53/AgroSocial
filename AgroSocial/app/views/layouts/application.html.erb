@@ -12,19 +12,7 @@
       <div class="masthead">
         <h3 class="muted">AgroSocial</h3>
 	<%= render 'common/session' %>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active"><%= link_to 'Home',root_path %></li>
-                <li><%= link_to 'Eventos',events_path %></li>
-                <li><%= link_to 'Noticias',notices_path %></li>
-                <li><a href="#">Anuncios</a></li>
-                <li><a href="#">Contactos</a></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- /.navbar -->
+  <%= render 'shared/nav' %>
       </div>
 
 
@@ -32,10 +20,9 @@
 	<p class="alert"><%= alert %></p>
 
 	<%= yield %>
-      <div class="footer">
-        <p>&copy; Company 2013</p>
-      </div>
-
+       
+    <%= render 'shared/footer' %>
     </div> <!-- /container -->
+    
 </body>
 </html>
