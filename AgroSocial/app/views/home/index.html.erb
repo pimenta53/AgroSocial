@@ -1,9 +1,12 @@
-  <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>Noticias a passar!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<div>
+    <% @notices.each do |notice| %>
+ 
+        <h4><%=notice.title%></h4>
 
-      </div>
+ 
+    <%end%>
+  </div>
+
 
       <hr>
 
