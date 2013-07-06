@@ -1,9 +1,6 @@
 AgroSocial::Application.routes.draw do
 
-<<<<<<< HEAD
   resources :notices
-=======
->>>>>>> f3833128fed48bd028622a88c300a1434bb4203a
 
   devise_for :associations
   
