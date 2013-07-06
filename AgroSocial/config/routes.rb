@@ -1,5 +1,7 @@
 AgroSocial::Application.routes.draw do
 
+  resources :notices
+
   devise_for :associations
   resources :events
 
