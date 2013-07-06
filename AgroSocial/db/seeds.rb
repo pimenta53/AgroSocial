@@ -59,3 +59,8 @@ Event.create(name: 'Festival da Carne',
 “Resende em Festa” é o programa da RTP que vai estar no Festival da Cereja, no dia 9 de junho, domingo, entre as 14h00 e as 19h00, com apresentação de João Baião.
 Duas tardes de emissão que vão apresentar o melhor que o concelho de Resende tem para oferecer!',
 	local: 'Vila Real' )
+
+Feed.create(name:'JN',
+	url:'http://www.jn.pt/RSS/rss.aspx?Feed=agricultura&Source=Tag')
+Feed.create(name: 'TSF',
+	url:'http://feeds.tsf.pt/TSF-Portugal')
