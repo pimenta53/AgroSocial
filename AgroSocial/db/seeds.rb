@@ -27,3 +27,27 @@ O ministro de Estado e dos Negócios Estrangeiros, que esteve este sábado de ma
 Durante várias horas deu a volta completa ao recinto numa visita que mais parecia uma campanha eleitoral.
 Ainda assim, Paulo Portas aproveitou para anunciar que, em dois anos, Portugal conseguiu a abertura de mais 50 novos mercados à agricultura portuguesa, o que, diz o ministro, favorece as exportações e a economia portuguesa',
               author:'Paulo Portas')
+
+Event.create(name: 'Feira do Fumeiro',
+	start_date: DateTime.new(2013,7,5),
+	end_date: DateTime.new(2013,9,2),
+	description: 'Maior feira de fumeiro de sempre',
+	local: 'Montalegre' )
+
+Event.create(name: 'Feira do Bacalhau de Cebolada em Ponte de Lima',
+	start_date: DateTime.new(2013,2,6),
+	end_date: DateTime.new(2013,2,7),
+	description: 'A Feira do Bacalhau de Cebolada em Ponte de Lima correspondeu às expetativas, foram milhares de pessoas que rumaram até à Vila de Ponte de Lima, para degustarem as iguarias típicas confeccionadas com bacalhau.
+Integrada no projeto "Em época baixa Ponte de Lima em Alta" cujo objetivo é contrariar as dinâmicas da tendência sazonal, a Feira do Bacalhau de Cebolada relança uma iguaria gastronómica emblemática da região. O bacalhau prato típico nas feiras quinzenais, continua a sê-lo nos dias que correm nas tabernas e nos restaurantes de Ponte de Lima.
+Esta significativa afluência refletiu-se também nos restaurantes da Vila, que como é habitual, recebem aos fins-de-semana, milhares de forasteiros, sendo de realçar que a procura aumentou neste fim-de-semana, pois à semelhança do sucesso do Arroz de Sarrabulho, também o bacalhau atrai novos públicos, contribuindo para o aumento de turistas/visitantes, com particular destaque para os espanhóis da vizinha Galiza.
+O prato de bacalhau, que foi Rei ao longo de todo o evento, registou um volume de negócios significativo, traduzindo-se num movimento de cerca de 3.000kg de bacalhau, entre a venda e o que se consumiu nos restaurantes presentes na feira.
+O projeto "Ponte de Lima em Alta" arrancou a 26 de janeiro prolongando-se até 3 de março com outra iguaria gastronómica a Feira do Porco e as Delícias do Sarrabulho. Desta forma, Ponte de Lima tem se afirmado no panorama gastronómico regional e a gastronomia ocupa já um lugar de destaque incontornável na economia local.',
+	local: 'Ponte de Lima' )
+
+Event.create(name: 'Festival da Cereja',
+	start_date: DateTime.new(2013,5,5),
+	end_date: DateTime.new(2013,6,2),
+	description: 'O Porto Canal vai transmitir, no dia 8 de junho, sábado, entre as 15h30 e as 18h00, um programa especial dedicado ao Festival da Cereja.
+“Resende em Festa” é o programa da RTP que vai estar no Festival da Cereja, no dia 9 de junho, domingo, entre as 14h00 e as 19h00, com apresentação de João Baião.
+Duas tardes de emissão que vão apresentar o melhor que o concelho de Resende tem para oferecer!',
+	local: 'Resende' )

@@ -2,7 +2,7 @@
 
 one:
   name: 
-  start_data: 2013-07-05
+  start_date: 2013-07-05
   end_date: 2013-07-05
   description: MyText
   local: MyString
@@ -10,7 +10,7 @@ one:
 
 two:
   name: 
-  start_data: 2013-07-05
+  start_date: 2013-07-05
   end_date: 2013-07-05
   description: MyText
   local: MyString
