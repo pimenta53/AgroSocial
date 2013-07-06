@@ -51,3 +51,11 @@ Event.create(name: 'Festival da Cereja',
 “Resende em Festa” é o programa da RTP que vai estar no Festival da Cereja, no dia 9 de junho, domingo, entre as 14h00 e as 19h00, com apresentação de João Baião.
 Duas tardes de emissão que vão apresentar o melhor que o concelho de Resende tem para oferecer!',
 	local: 'Resende' )
+
+Event.create(name: 'Festival da Carne',
+	start_date: DateTime.new(2013,5,5),
+	end_date: DateTime.new(2013,6,2),
+	description: 'O Porto Canal vai transmitir, no dia 8 de junho, sábado, entre as 15h30 e as 18h00, um programa especial dedicado ao Festival da Cereja.
+“Resende em Festa” é o programa da RTP que vai estar no Festival da Cereja, no dia 9 de junho, domingo, entre as 14h00 e as 19h00, com apresentação de João Baião.
+Duas tardes de emissão que vão apresentar o melhor que o concelho de Resende tem para oferecer!',
+	local: 'Vila Real' )
