@@ -8,6 +8,8 @@ class CreateEvents < ActiveRecord::Migration
       t.string :local
       t.string :image
 
+      t.references :association
+
       t.timestamps
     end
   end

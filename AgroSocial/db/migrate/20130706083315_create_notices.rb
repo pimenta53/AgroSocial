@@ -6,6 +6,8 @@ class CreateNotices < ActiveRecord::Migration
       t.text :content
       t.string :author
 
+      t.references :event
+
       t.timestamps
     end
   end

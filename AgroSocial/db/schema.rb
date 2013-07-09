@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130706083315) do
     t.text     "description"
     t.string   "local"
     t.string   "image"
+    t.integer  "association_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 20130706083315) do
     t.date     "date_time"
     t.text     "content"
     t.string   "author"
+    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
