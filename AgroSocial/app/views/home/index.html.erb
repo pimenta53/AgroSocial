@@ -1,10 +1,26 @@
 <div>
+  <div class="slider">
+        <div class="container-fluid">
+          <div id="heroSlider" class="carousel slide">
+            <div class="carousel-inner">
+              
+                    
     <% @notices.each do |notice| %>
- 
-        <h4><%=notice.title%></h4>
-
- 
-    <%end%>
+ <div class="active item">
+                <div class="hero-unit">
+                  <div class="row-fluid">
+        <h1><%= link_to h(notice.name), notice.url %></h1>
+        <div><%=notice.summary%></div>
+                  </div>
+                </div>
+              </div>
+                  
+      <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    
   </div>
 
 
@@ -13,13 +29,20 @@
   <!-- Example row of columns -->
       <div class="row-fluid">
         <% @events.each do |event| %>
-        <div class="span4">
-          <h2><%= event.name %></h2>
-          <p><%= event.description %> </p>
-          <p><%= link_to 'Show',event,:class => 'btn' %></p>
-        </div>
-         <% end %>
-      </div>
-
+        <li class="span4">
+            <div class="thumbnail">
+                <img src="imgages/placeholder-360x200.jpg" alt="product name">
+                  <div class="caption">
+                    <h3><%= event.name %></h3>
+                      <p><%= event.description %> </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <%= link_to 'Show',event,:class => 'btn' %></p>
+                    </p>
+                  </div>
+                </div>
+              </li>
+        <% end %>
       <hr>
 

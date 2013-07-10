@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130706083315) do
+ActiveRecord::Schema.define(version: 20130710113630) do
 
   create_table "associations", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -42,6 +42,16 @@ ActiveRecord::Schema.define(version: 20130706083315) do
     t.string   "local"
     t.string   "image"
     t.integer  "association_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feed_entries", force: true do |t|
+    t.string   "name"
+    t.text     "summary"
+    t.string   "url"
+    t.datetime "published_at"
+    t.string   "guid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
