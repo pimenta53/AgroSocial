@@ -1,25 +1,13 @@
 <div>
-  <div class="slider">
-        <div class="container-fluid">
-          <div id="heroSlider" class="carousel slide">
-            <div class="carousel-inner">
-              
+
                     
     <% @notices.each do |notice| %>
- <div class="active item">
-                <div class="hero-unit">
-                  <div class="row-fluid">
         <h1><%= link_to h(notice.name), notice.url %></h1>
-        <div><%=notice.summary%></div>
-                  </div>
-                </div>
-              </div>
+        <div><%=simple_format(notice.summary)%></div>
+                 
                   
       <%end%>
-            </div>
-          </div>
-        </div>
-      </div>
+          
     
   </div>
 
