@@ -1,36 +1,55 @@
-<div>
-
-                    
-    <% @notices.each do |notice| %>
-        <h1><%= link_to h(notice.name), notice.url %></h1>
-        <div><%=simple_format(notice.summary)%></div>
-                 
-                  
-      <%end%>
-          
-    
-  </div>
-
-
-      <hr>
-
   <!-- Example row of columns -->
+    <div class="span3">
+      <div class="row-fluid logo">
+            <div class="span12">
+              <img alt="140x140" width="100%" height="auto" src="http://lorempixel.com/140/140/">
+            </div>
+      </div>
+      <h2 align="center">Eventos</h2>
       <div class="row-fluid">
+                  <div class="thumbnail">
+                      <img src="http://lorempixel.com/250/100/" class="media-object" alt="Foto evento">
+                        <div class="caption">
+                          <h4>Evento exemplo dia de caça</h4>
+                            <p>exemplo de descrição do evento aqui deve conter uma pequena descrição, neste caso é para um dia de casa ao javali ...</p>
+                        </div>
+                        <div class="widget-footer">
+                          <p>
+                            <button class="btn btn-small" type="button">Ver</button>
+                          </p>
+                        </div>
+                  </div>
+           </div>   
         <% @events.each do |event| %>
-        <li class="span4">
-            <div class="thumbnail">
-                <img src="imgages/placeholder-360x200.jpg" alt="product name">
-                  <div class="caption">
-                    <h3><%= event.name %></h3>
-                      <p><%= event.description %> </p>
+          <div class="row-fluid">
+        <!--  <li>-->
+                  <div class="thumbnail">
+                      <img src="imgages/placeholder-360x200.jpg" alt="product name">
+                        <div class="caption">
+                          <h3><%= event.name %></h3>
+                            <p><%= event.description %> </p>
+                        </div>
+                        <div class="widget-footer">
+                          <p>
+                            <%= link_to 'Show',event,:class => 'btn' %>
+                          </p>
+                        </div>
                   </div>
-                  <div class="widget-footer">
-                    <p>
-                      <%= link_to 'Show',event,:class => 'btn' %></p>
-                    </p>
-                  </div>
-                </div>
-              </li>
+         <!--  </li>-->
+           </div>     
         <% end %>
-      <hr>
+      </div>    
+     <!--    <hr> --> 
+
+<div class="span6">
+       <h2 align="center">Noticias</h2>            
+    <% @notices.each do |notice| %>
+        <div class="row-fluid"> 
+          <h3><%= link_to h(notice.name), notice.url %></h3>
+          <div><%=simple_format(notice.summary)%></div> 
+        </div>    
+    <%end%>  
+</div>
+
+   <!--    <hr> -->
 
