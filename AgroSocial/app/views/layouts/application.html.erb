@@ -7,14 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="row">
+    <div class="span11 offset1">
+      <h1>AgroSocial</h1>
+      <p>Novidades de Agricultura</p>
+    </div>
+  </div>
+</header>
+
   <div class="masthead">
       <%= render 'shared/nav' %>
-      <%= render 'common/session' %>
+      <%#= render 'common/session' %>
+      <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p> 
     </div>
 	<div class="container">
-  	 <p class="notice"><%= notice %></p>
-	   <p class="alert"><%= alert %></p>
     <div class="row">
+        <div class="span12">
+            <div class="subnav">
+                <ul class="nav nav-pills">
+                  <li class="active"><a href="http://bootswatch.com/flatly/#typography">Anúncios</a></li>
+                  <li class=""><a href="http://bootswatch.com/flatly/#navbar">Gastronomia</a></li>
+                  <li><a href="http://bootswatch.com/flatly/#buttons">Regiões</a></li>
+                </ul>
+              </div>
+        </div>
+     </div>
+      <div class="row">
       <div class="span10 offset1 content-center ">
         <%= yield %>
       </div>
