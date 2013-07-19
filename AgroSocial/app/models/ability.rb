@@ -4,12 +4,25 @@ class Ability
   def initialize(user)
     user ||= User.new
 
-    #example
-    if user.email == "jmbg.41@gmail.com"
-        can :read, Event
+    if(user.is_association)
+        can :manage, :all
     else
-        cannot :read, Event
+        can :read, :all
     end
+
+    #if(user.is_association)
+    #    can :manage, Event, :user_id => user.id
+    #else
+    #    cannot :manage, Event
+    #end
+
+    #example
+    #if user.email == "jmbg.41@gmail.com"
+    #    can :read, Event
+    #else
+    #    cannot :read, Event
+    #end
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
