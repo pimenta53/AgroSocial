@@ -1,11 +1,11 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
-    user ||= User.new
+  def initialize(assoc)
+    assoc ||= Association.new
 
-    if(user.is_association)
-        can :manage, :all
+    if(assoc.is_association)
+        can :manage, Event, :association_id => assoc.id
     else
         can :read, :all
     end
