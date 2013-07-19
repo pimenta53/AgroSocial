@@ -1,10 +1,16 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource :event
+
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
+  end
 
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all 
   end
 
   # GET /events/1
