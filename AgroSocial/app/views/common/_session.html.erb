@@ -1,6 +1,6 @@
 <%- if association_signed_in? %>
-  <p>Hello <%= current_user.email %><br />
-  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></p>
+  <p>Hello <%= current_association.email %><br />
+  <%= link_to 'Sign out', destroy_association_session_path, :method => :delete %></p>
 <%- else %>
   <p>
     <%= link_to 'Register', new_association_registration_path %> |
