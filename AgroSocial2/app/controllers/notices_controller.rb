@@ -25,6 +25,7 @@ class NoticesController < ApplicationController
   # GET /notices/new.json
   def new
     @notice = Notice.new
+    @event = Event.find(params[:event_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class NoticesController < ApplicationController
   # POST /notices.json
   def create
     @notice = Notice.new(params[:notice])
+    @notice.event_id = params[:event_id]
 
     respond_to do |format|
       if @notice.save

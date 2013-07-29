@@ -3,10 +3,12 @@ AgroSocial::Application.routes.draw do
 
   root :to => "events#index"
 
-  resources :notices
+  #resources :notices
 
 
-  resources :events
+  resources :events, :shallow => true do 
+    resources :notices
+  end
 
 
   resources :associations
