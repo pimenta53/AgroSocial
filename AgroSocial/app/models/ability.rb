@@ -5,8 +5,9 @@ class Ability
     assoc ||= Association.new
 
     if(assoc.is_association)
-        can :manage, Event, :association_id => assoc.id
+        can :read, :all
         can :create, Event
+        can :manage, Event, :association_id => assoc.id
     else
         can :read, :all
     end
