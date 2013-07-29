@@ -26,7 +26,10 @@ gem 'feedzirra', :git => 'https://github.com/pauldix/feedzirra.git'
 
 gem "cancan"
 
-gem 'devise'
+
+gem "protected_attributes", "~> 1.0.0"
+
+gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'devise-encryptable'
 gem 'bootstrap-sass', '~> 2.3.1.2'
 gem 'cancan'

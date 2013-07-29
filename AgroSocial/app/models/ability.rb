@@ -6,6 +6,7 @@ class Ability
 
     if(assoc.is_association)
         can :manage, Event, :association_id => assoc.id
+        can :create, Event
     else
         can :read, :all
     end
