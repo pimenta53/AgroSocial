@@ -1,5 +1,6 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource :feed
 
   # GET /feeds
   # GET /feeds.json

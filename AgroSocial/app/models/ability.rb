@@ -4,6 +4,8 @@ class Ability
   def initialize(assoc)
     assoc ||= Association.new
 
+    cannot :manage, Feed
+
     if(assoc.is_association)
         can :read, :all
         can :create, Event
