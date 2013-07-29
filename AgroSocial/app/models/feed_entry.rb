@@ -15,11 +15,11 @@ class FeedEntry < ActiveRecord::Base
     add_entries(feed.entries)
     
     loop do
-      sleep delay_interval
       updated_feed = Feedzirra::Feed.update(feed)
       if updated_feed!=nil && updated_feed.updated?
       	add_entries(updated_feed.new_entries) 
       end
+      sleep delay_interval
   	end
     
   end
