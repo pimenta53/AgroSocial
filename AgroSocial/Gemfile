@@ -5,6 +5,8 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem "binding_of_caller"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -21,6 +23,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'feedzirra', :git => 'https://github.com/pauldix/feedzirra.git'
+
+gem "cancan"
 
 gem 'devise'
 gem 'devise-encryptable'

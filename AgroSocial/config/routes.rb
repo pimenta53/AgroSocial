@@ -1,14 +1,13 @@
 AgroSocial::Application.routes.draw do
 
-  resources :notices
 
   devise_for :associations
   
-  resources :events
+  resources :events, :shallow => true do
+    resources :notices
+  end
 
   resources :feeds
-
-  devise_for :users
 
   root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.

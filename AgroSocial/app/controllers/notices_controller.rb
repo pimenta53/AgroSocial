@@ -1,6 +1,11 @@
 class NoticesController < ApplicationController
   before_action :set_notice, only: [:show, :edit, :update, :destroy]
 
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
+  end
+
   # GET /notices
   # GET /notices.json
   def index
@@ -15,16 +20,21 @@ class NoticesController < ApplicationController
   # GET /notices/new
   def new
     @notice = Notice.new
+    @event = Event.find(params[:event_id])
   end
 
   # GET /notices/1/edit
   def edit
+    #Authorizations
+    event = Event.find(Notice.find(params[:id]).event_id)
+    authorize! [:edit], event
   end
 
   # POST /notices
   # POST /notices.json
   def create
     @notice = Notice.new(notice_params)
+    @notice.event_id = params[:event_id]
 
     respond_to do |format|
       if @notice.save
@@ -40,6 +50,10 @@ class NoticesController < ApplicationController
   # PATCH/PUT /notices/1
   # PATCH/PUT /notices/1.json
   def update
+    #Authorizations
+    event = Event.find(Notice.find(params[:id]).event_id)
+    authorize! [:edit], event
+    
     respond_to do |format|
       if @notice.update(notice_params)
         format.html { redirect_to @notice, notice: 'Notice was successfully updated.' }
@@ -54,6 +68,11 @@ class NoticesController < ApplicationController
   # DELETE /notices/1
   # DELETE /notices/1.json
   def destroy
+    #Authorizations
+    event = Event.find(Notice.find(params[:id]).event_id)
+    authorize! [:edit], event
+
+
     @notice.destroy
     respond_to do |format|
       format.html { redirect_to notices_url }

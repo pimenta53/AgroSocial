@@ -17,6 +17,10 @@
 
   <tbody>
     <% @events.each do |event| %>
+
+      <% if can? :read, event %>
+        <h1>asdasd</h1>
+      <% end %>
       <tr>
         <td><%= event.name %></td>
         <td><%= event.start_date %></td>
@@ -26,6 +30,9 @@
         <td><%= event.image %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <% if can? :edit, @events %>
+          <%= link_to "Edit", event, method: :delete %>
+        <% end %>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
