@@ -1,4 +1,7 @@
 class Association < ActiveRecord::Base
+
+
+	attr_accessible :email, :encrypted_password, :password
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

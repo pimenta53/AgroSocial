@@ -1,6 +1,5 @@
 AgroSocial::Application.routes.draw do
 
-
   devise_for :associations
   
   resources :events, :shallow => true do

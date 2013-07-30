@@ -26,13 +26,16 @@ class NoticesController < ApplicationController
   # GET /notices/1/edit
   def edit
     #Authorizations
-    event = Event.find(Notice.find(params[:id]).event_id)
+    event = Event.find(:event_id)
     authorize! [:edit], event
   end
 
   # POST /notices
   # POST /notices.json
   def create
+    event = Event.find(params[:event_id])
+    authorize! [:edit], event
+
     @notice = Notice.new(notice_params)
     @notice.event_id = params[:event_id]
 
@@ -51,7 +54,7 @@ class NoticesController < ApplicationController
   # PATCH/PUT /notices/1.json
   def update
     #Authorizations
-    event = Event.find(Notice.find(params[:id]).event_id)
+    event = Event.find(params[:event_id])
     authorize! [:edit], event
     
     respond_to do |format|

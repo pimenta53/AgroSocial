@@ -31,6 +31,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    @event.association_id = current_association.id
 
     respond_to do |format|
       if @event.save
