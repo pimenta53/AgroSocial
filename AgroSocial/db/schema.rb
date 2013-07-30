@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20130710113630) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.boolean  "is_association",         default: false
+    t.boolean  "is_association",         default: true
     t.string   "name"
     t.text     "description"
     t.string   "website"

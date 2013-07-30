@@ -1,6 +1,7 @@
 <!-- PAGE-HEADER-->
     <div class="page-header">
 		<div class="container">
+			<hr>
 			<div class="row">
 				<div class="span4">
 					<%= image_tag("logo.png")%>
@@ -38,11 +39,11 @@
 								<div class="caption">
 									<p style="margin-top:10px;"><strong>Por: ADMIN</strong> | De <%= event.start_date%> a <%= event.end_date%></p>
 								</div>
-							</div>
 							<p>
 								<%= event.description %>
 							</p>
-							 <%= link_to 'Ver mais',event,:class => 'btn' %></p>
+							<%= link_to 'Ver mais',event,:class => 'btn' %></p>
+							</div> 
 						<%end%>
 					<!--/ article-->
 					</div>
@@ -61,13 +62,13 @@
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="1">
-				<% @notices.each do |notice| %>
+				<% @feedEntries.each do |feedEntry| %>
 				<!-- ITEM-->
 					<div class="row-fluid">
 						<div class="span10">
-							<h4><%= notice.name%></h4>
+							<h1><%= feedEntry.name%></h1>
 							<p>
-								<%= notice.summary %>
+								<%= feedEntry.summary %>
 							</p>
 						</div>				
 					</div>
