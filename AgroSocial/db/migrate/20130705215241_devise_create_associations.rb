@@ -20,7 +20,7 @@ class DeviseCreateAssociations < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       ## Control
-      t.boolean :is_association, :default => true
+      t.boolean :is_association, :default => false
 
       ## Confirmable
       # t.string   :confirmation_token
