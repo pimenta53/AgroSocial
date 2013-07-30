@@ -1,36 +1,89 @@
-<div>
+<!-- PAGE-HEADER-->
+    <div class="page-header">
+		<div class="container">
+			<div class="row">
+				<div class="span4">
+					<%= image_tag("logo.png")%>
+				</div>
+				<div class="span8">
+					<div class="well text-center">
+						Promover a nossa agricultura
+					</div>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="span12">
+					<p class="alert alert-success" style="text-transform:uppercase; display:inline-block; box-sizing:border-box; -moz-box-sizing:border-box;width:100%;"><span class="label label-important">Announcement:</span>  Here goes your news and infos lorem ipsum Here goes your news and infos lorem ipsum <a class="btn btn-mini btn-success pull-right">Read more</a>
+					</p>
+						
+			</div>
+		</div>
+      </div>
+	</div>
 
-                    
-    <% @notices.each do |notice| %>
-        <h1><%= link_to h(notice.name), notice.url %></h1>
-        <div><%=simple_format(notice.summary)%></div>
-                 
-                  
-      <%end%>
-          
-    
-  </div>
 
-
-      <hr>
-
-  <!-- Example row of columns -->
-      <div class="row-fluid">
-        <% @events.each do |event| %>
-        <li class="span4">
-            <div class="thumbnail">
-                <img src="imgages/placeholder-360x200.jpg" alt="product name">
-                  <div class="caption">
-                    <h3><%= event.name %></h3>
-                      <p><%= event.description %> </p>
-                  </div>
-                  <div class="widget-footer">
-                    <p>
-                      <%= link_to 'Show',event,:class => 'btn' %></p>
-                    </p>
-                  </div>
-                </div>
-              </li>
-        <% end %>
-      <hr>
-
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row-fluid">
+	<!-- CONTENT SIDE-->
+		<div class="span8">
+			<!-- INNER ROW-->
+				<div class="row-fluid">
+					<div class="span12">
+					<!-- article-->
+						<% @events.each do |event| %>
+							<h1><%= event.name %></h1>
+							<div class="thumbnail">
+								<%= image_tag("thumb.jpg")%>
+								<div class="caption">
+									<p style="margin-top:10px;"><strong>Por: ADMIN</strong> | De <%= event.start_date%> a <%= event.end_date%></p>
+								</div>
+							</div>
+							<p>
+								<%= event.description %>
+							</p>
+							 <%= link_to 'Ver mais',event,:class => 'btn' %></p>
+						<%end%>
+					<!--/ article-->
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- /INNER ROW-FLUID-->
+		<!-- left SIDE-->   
+	<div class="span4 hidden-phone">         
+		<div id="left-side-menu">  
+		<div class="well" >
+		<div class="tabbable">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#1" data-toggle="tab">Ultimas Noticias</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="1">
+				<% @notices.each do |notice| %>
+				<!-- ITEM-->
+					<div class="row-fluid">
+						<div class="span10">
+							<h4><%= notice.name%></h4>
+							<p>
+								<%= notice.summary %>
+							</p>
+						</div>				
+					</div>
+					<hr>
+				<%end%>
+				<!-- / ITEM-->
+				
+					
+				
+              </div>
+            </div>
+          </div>
+         <!-- /TABS-->
+		</div><!-- /well--> 
+		</div>      
+    </div>
+	<!-- /left SIDE--> 
+	</div>
+</div>
